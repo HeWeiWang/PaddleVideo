@@ -123,7 +123,8 @@ class FeatureReader(DataReader):
                     print("warning: load data {} failed, {}".format(filepath, str(e)))
                     traceback.print_exc()
                     continue
-            if self.mode == 'infer' and len(batch_out) > 0:
+	    # if self.mode == 'infer' and len(batch_out) > 0:
+            if len(batch_out) > 0:
                 yield batch_out
 
         return reader

@@ -193,7 +193,7 @@ def train(args):
             assert os.path.exists(args.pretrain), \
                 "Given pretrain weight dir {} not exist.".format(args.pretrain)
         if args.pretrain:
-            train_model.load_pretrain_params_file(exe, args.pretrain, train_prog, place)
+            train_model.load_test_weights_file(exe, args.pretrain, train_prog, place)
 
     build_strategy = fluid.BuildStrategy()
     build_strategy.enable_inplace = True

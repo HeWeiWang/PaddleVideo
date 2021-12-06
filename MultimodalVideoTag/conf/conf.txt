@@ -12,10 +12,10 @@ feature_lod_level = [1, 1, 0]
 embedding_size = 512
 lstm_size_img = 512
 lstm_size_audio = 128 
-num_classes = 100
+num_classes = 110
 top_n = [1,2,3,5]
 num_first_classes = 20
-class_name_file = "./datasets/class_all.txt"
+class_name_file = "./datasets/class.txt"
 ernie_freeze = True
 lstm_pool_mode = 'text_guide'
 
