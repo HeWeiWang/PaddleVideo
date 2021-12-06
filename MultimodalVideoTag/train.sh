@@ -10,4 +10,4 @@ python scenario_lib/train.py --model_name=AttentionLstmErnie \
 --log_interval=20 \
 --valid_interval=1 \
 --save_dir=checkpoints_save_new/ \
-#--pretrain=checkppints_save/
+--pretrain=checkpoints_save/
