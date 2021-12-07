@@ -16,7 +16,7 @@
 该代码库用于多模态场景下视频分类任务，基于paddle2.0版本开发，模型基于真实短视频业务数据，融合文本、视频图像、音频三种模态进行视频多模标签分类，相比纯视频图像特征，显著提升高层语义标签效果。其原理示意如下图所示。
 
 <p align="center">
-<img src="model.png"  hspace='10'/> <br />
+<img src="images/model.png"  hspace='10'/> <br />
 MutimodalVideoTag 多模态视频分类模型示意图
 </p>
 
@@ -56,6 +56,7 @@ sh eval_and_save_model.sh
 sh inference.sh
 ```
 ## 模型优化
+模型方面，主要在文本分支进行了实验，实验结果显示ERNIE 在多分支下不微调，而是使用后置网络进行微调，训练速度快，且稳定，同时attention 方面使用文本信息增强图像、音频的attention 学习能一定程度提升模型效果。
 
 | 模型                                                         | Hit@1 | Hit@2 |
 | ------------------------------------------------------------ | ----- | ----- |
@@ -65,6 +66,9 @@ sh inference.sh
 
 ## 模型部署
 模型已经上线到百度智能云媒体分析，欢迎试用。
+<div align="center">
+  <img src="images/show.gif" width="480px"/><br>
+</div>
 
 
 ## 参考论文
